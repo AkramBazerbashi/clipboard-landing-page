@@ -7,81 +7,419 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Clipboard landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      font-size: 18px;
+      box-sizing: border-box;
+    }
+
+    .container{
+      width: 100%;
+
+    }
+    .container .par1 P{
+      text-align: center;
+    }
+    .container .par2 P{
+      text-align: center;
+    }
+    .container .par4 P{
+      text-align: center;
+    }
+    .container .par5 P{
+      text-align: center;
+    }
+    .container .par6 P{
+      text-align: center;
+    }
+    .arr1 div p{
+      text-align: center;
+    }
+    .par1{
+      width: 41%;
+      margin: auto;
+    }
+    .par2{
+      width: 47%;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+    .par4{
+      width: 47%;
+      margin: auto;
+    }
+    .par5{
+      width: 41%;
+      margin: auto;
+    }
+    .par6{
+      width: 42%;
+      margin: auto;
+    }
+    .par3{
+      display: inline-block;
+      width: 26%;
+      margin-left: 70px;
+      position: relative;
+      top: -200px;
+    }
+    .par1 p:first-child{
+      font-size: 38px;
+      color: hsl(210, 10%, 33%);
+      margin-bottom: 20px;
+    }
+    .par2 p:first-child{
+      font-size: 30px;
+      color: hsl(210, 10%, 33%);
+    }
+    .logo{
+      width: fit-content;
+      margin: auto;
+      margin-top: 120px;
+      margin-bottom: 60px;
+    }
+    .buttons{
+      width: fit-content;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+    .buttons2{
+      width: fit-content;
+      margin: auto;
+      
+    }
+    button{
+      border-radius: 20px;
+      padding: 10px 20px;
+      border: none;
+    }
+    
+    button:first-of-type{
+      color: white;
+      background-color: hsl(171, 66%, 44%);
+      margin-right: 10px;
+      box-shadow: 0px 5px 20px 0px hsl(171deg 66% 44%);
+    }
+    button:nth-of-type(2){
+      color: white;
+      background-color: hsl(233, 100%, 69%);
+      box-shadow: 0px 5px 20px 0px hsl(233, 100%, 69%);
+    }
+    button:nth-of-type(3){
+      color: white;
+      background-color: hsl(171, 66%, 44%);
+      margin-right: 10px;
+      box-shadow: 0px 5px 20px 0px hsl(171deg 66% 44%);
+    }
+    button:nth-of-type(4){
+      color: white;
+      background-color: hsl(233, 100%, 69%);
+      box-shadow: 0px 5px 20px 0px hsl(233, 100%, 69%);
+    }
+    button:active{
+      background-color: hsla(233, 100%, 69%, 0.8);
+    }
+    
+    .img1{
+      width: fit-content;
+      margin-left: -40px;
+      display: inline-block;
+    }
+    .img2{
+      width: fit-content;
+      margin: auto;
+      margin-top: 70px;
+    }
+    .arr1{
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+      margin:auto;
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+    .arr1 > div{
+      width: 32%;
+    }
+    .arr1 > div > div{
+      width: 50px;
+      height: 50px;
+      margin: auto;
+    }
+    .arr2{
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+      margin:auto;
+      margin-bottom: 100px;
+
+    }
+    .footer{
+      background-color: rgb(236, 236, 236);
+      padding: 30px 0px;
+      margin-left: -8px;
+      margin-right: -8px;
+      margin-bottom: -10px;
+    }
+    .con{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 85%;
+      margin:auto;
+    }
+    .info{
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    a{
+      width: 33%;
+      color: hsl(210, 10%, 33%);
+    }
+    .social{
+      width: 10%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .size{
+      width: 35px;
+      height: 35px;
+    }
+    .size2{
+      width: 18px;
+      height: 18px;
+    }
+    .weight1{
+      font-weight: 600;
+    }
+    .weight2{
+      font-weight: 400;
+    }
+    .color2{
+      color: hsl(201, 11%, 66%);
+    }
+    .buttons2{
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+    .background{
+      position: absolute;
+      top: 0px;
+    }
+    .background img{
+      width: 1341px;
+    }
+    @media (max-width: 375px) {
+      .background img{
+        width: 375px;
+      }
+      .par1{
+        width: 85%;
+      }
+      .par1 p:first-child{
+      font-size: 34px;
+      }
+      .buttons{
+        width: 85%;
+      }
+      .buttons2{
+        width: 85%;
+      }
+      button{
+        display: block;
+        width: 90%;
+        margin-bottom: 20px;
+      }
+      
+      .par2{
+        width: 85%;
+      }
+      .img1{
+        margin-left: 0px;
+        display: block;
+      }
+      .img1 img{
+        width: 330px;
+      }
+      .img2 img{
+        width: 330px;
+      }
+      .par3{
+      display: block;
+      width: 85%;
+      margin-left: 0px;
+      position: static;
+      top: 0px;
+      }
+      .par3 p{
+      text-align: center;
+      }
+      .par4{
+        width: 85%;
+      }
+      .par5{
+        width: 85%;
+      }
+      .arr1{
+        flex-direction: column;
+      }
+      .arr1 > div{
+        width: 90%;
+        margin-bottom: 50px;
+      }
+      
+      .arr2{
+      flex-direction: column ;
+      height: 500px;
+      align-items: center;
+      }
+      .par6{
+        width: 85%;
+      }
+      .con{
+        flex-direction: column;
+      }
+      a{
+      width: 100%;
+      text-align: center;
+      }
+      .info{
+        width: 90%;
+        height: 300px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .social{
+        width: 40%;
+      }
+    }
   </style>
 </head>
 <body>
 
-  A history of everything you copy
+  <div class="background">
+    <img src="images/bg-header-desktop.png">
+  </div>
+  <div class="container">
+    <div class="logo">
+      <img src="images\logo.svg">
+    </div>
+    <div class="par1" >
+      <p class="weight1" >A history of everything you copy</p>
+      <p class="color2" style="margin-bottom: 30px;">Clipboard allows you to track and organize everything you 
+      copy. Instantly access your clipboard on all your devices.</p>
+    </div>
+    
+    <div class="buttons">
+      <button>Download for iOS</button>
+      <button>Download for Mac</button>
+    </div>
+    <div class="par2">
+      <p class="weight1">Keep track of your snippets</p>
+      <p class="color2">Clipboard instantly stores any item you copy in the cloud, 
+      meaning you can access your snippets immediately on all your 
+      devices. Our Mac and iOS apps will help you organize everything.</p>
+    </div>
 
-  Clipboard allows you to track and organize everything you 
-  copy. Instantly access your clipboard on all your devices.
+    <div class="img1">
+      <img src="images\image-computer.png">
+    </div>
+    <div class="par3">
+      <p class="weight2" style="font-size: 24px; color: hsl(210, 10%, 33%); margin-bottom: 10px;">Quick Search</p>
+      <p class="color2" style="margin-top: 10px;">Easily search your snippets by content, category, web address, application, and more.</p>
+      <p class="weight2" style="font-size: 24px; color: hsl(210, 10%, 33%); margin-bottom: 10px;">iCloud Sync</p>
+      <p class="color2" style="margin-top: 10px;">Instantly saves and syncs snippets across all your devices.</p>
+      <p class="weight2" style="font-size: 24px; color: hsl(210, 10%, 33%); margin-bottom: 10px;">Complete History</p>
+      <p class="color2"style="margin-top: 10px;">Retrieve any snippets from the first moment you started using the app.</p>
+    </div>
+    <div class="par4">
+      <p class="weight1" style="font-size: 30px; color: hsl(210, 10%, 33%); margin-top: 100px;">Access Clipboard anywhere</p>
+      <p class="color2">Whether you’re on the go, or at your computer, you can access all your Clipboard 
+        snippets in a few simple clicks.</p>
+    </div>
+    <div class="img2">
+      <img src="images\image-devices.png">
+    </div>
+    <div class="par5">
+      <p class="weight1" style="font-size: 30px; color: hsl(210, 10%, 33%);">Supercharge your workflow</p>
+      <p class="color2">We’ve got the tools to boost your productivity.</p>
+    </div>
 
-  Download for iOS
-  Download for Mac
-
-  Keep track of your snippets
-
-  Clipboard instantly stores any item you copy in the cloud, 
-  meaning you can access your snippets immediately on all your 
-  devices. Our Mac and iOS apps will help you organize everything.
-
-  Quick Search
-
-  Easily search your snippets by content, category, web address, application, and more.
-
-  iCloud Sync
-
-  Instantly saves and syncs snippets across all your devices.
-
-  Complete History
-
-  Retrieve any snippets from the first moment you started using the app.
-
-  Access Clipboard anywhere
-
-  Whether you’re on the go, or at your computer, you can access all your Clipboard 
-  snippets in a few simple clicks.
-
-  Supercharge your workflow
-
-  We’ve got the tools to boost your productivity.
-
-  Create blacklists
-
-  Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
-
-  Plain text snippets
-
-  Remove unwanted formatting from copied text for a consistent look.
-
-  Sneak preview
-
-  Quick preview of all snippets on your Clipboard for easy access.
-
-  Clipboard for iOS and Mac OS
-
-  Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
-  and you’re ready to start adding to your clipboard.
-
-  Download for iOS
-  Download for Mac
-
-  FAQs
-  Contact Us
-  Privacy Policy
-  Press Kit
-  Install Guide
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+    <div class="arr1">
+      <div class="left">
+        <div>
+          <img src="images\icon-blacklist.svg">
+        </div>
+        <p style="font-size: 24px; color: hsl(210, 10%, 33%);">Create blacklists</p>
+        <p class="color2">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
+        </p>
+      </div>
+      <div class="middle">
+        <div>
+          <img src="images\icon-text.svg">
+        </div>
+        <p style="font-size: 24px; color: hsl(210, 10%, 33%);">Plain text snippets</p>
+        <p class="color2">Remove unwanted formatting from copied text for a consistent look.</p>
+      </div>
+      <div class="right">
+        <div>
+          <img src="images\icon-preview.svg">
+        </div>
+        <p style="font-size: 24px; color: hsl(210, 10%, 33%);">Sneak preview</p>
+        <p class="color2">Quick preview of all snippets on your Clipboard for easy access.</p>
+      </div>
+    </div>
+    <div class="arr2">
+      <div>
+        <img src="images\logo-google.png">
+      </div>
+      <div>
+        <img src="images\logo-ibm.png">
+      </div>
+      <div>
+        <img src="images\logo-microsoft.png">
+      </div>
+      <div>
+        <img src="images\logo-hp.png">
+      </div>
+      <div>
+        <img src="images\logo-vector-graphics.png">
+      </div>
+    </div>
+    <div class="par6">
+      <p class="weight1" style="font-size: 30px; color: hsl(210, 10%, 33%);">Clipboard for iOS and Mac OS</p>
+      <p class="color2">Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+        and you’re ready to start adding to your clipboard.</p>
+    </div>
+    
+    <div class="buttons2">
+      <button>Download for iOS</button>
+      <button>Download for Mac</button>
+    </div>
+    <div class="footer">
+      <div class="con">
+        <div class="logo2">
+          <img src="images\logo.svg" class="size">
+        </div>
+        <div class="info">
+          <a>FAQs</a>
+          <a>Privacy Policy</a>
+          <a>Install Guide</a>
+          <a>Contact Us</a>
+          <a>Press Kit</a>
+          <a></a>
+        </div>
+        <div class="social">
+          <img src="images\icon-facebook.svg" class="size2">
+          <img src="images\icon-twitter.svg" class="size2">
+          <img src="images\icon-instagram.svg" class="size2">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
